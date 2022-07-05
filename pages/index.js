@@ -12,7 +12,7 @@ const Page = () => {
 	  <Heading as="h2" variant="page-title">
 	    Twel Vu
       	  </Heading>
-	  <p>Research Intern | Student </p>
+	  <p>Research Intern | Senior Student </p>
 	</Box>
       </Box>
     </Container>
