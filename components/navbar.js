@@ -15,7 +15,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 
-import { HumbergerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, HumbergerIcon } from '@chakra-ui/icons'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -55,9 +55,42 @@ const Navbar = props => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo /> 
+            <Logo />
           </Heading>
         </Flex>
+
+        <Stack 
+          direction={{base: 'column', md: 'row'}}
+          display={{base: 'none', md: 'flex'}}
+          width={{base: 'full', md: 'auto'}}
+          alignItems="center"
+          flexGrow={1}
+          mt={{base: 4, nmd: 0}}
+        >
+          <LinkItem href="/works" path={path}> Works</LinkItem>
+          <LinkItem href="/abc" path={path}> ABC</LinkItem>
+        </Stack>
+
+        <Box flex={1} align="right">
+          <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
+            <Menu>
+              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About Me</MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem as={Link}>Works</MenuItem>
+                </NextLink>
+                <NextLink href="/abc" passHref>
+                  <MenuItem as={Link}>ABC</MenuItem>
+                </NextLink>
+                <MenuItem as={Link} href="https://github.com/twelcone/twel-homepage">View Source</MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
+
       </Container>
     </Box>
   )

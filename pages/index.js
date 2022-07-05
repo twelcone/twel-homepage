@@ -9,11 +9,11 @@ const Page = () => {
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-	  <Heading as="h2" variant="page-title">
-	    Twel Vu
-      	  </Heading>
-	  <p>Research Intern | Senior Student </p>
-	</Box>
+          <Heading as="h2" variant="page-title">
+            Twel Vu
+          </Heading>
+          <p>Research Intern | Senior Student </p>
+	      </Box>
       </Box>
     </Container>
   )
