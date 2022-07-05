@@ -1,0 +1,34 @@
+{
+  "name": "twel-homepage",
+  "version": "1.0.0",
+  "description": "Twel's website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/twelcone/twel-homepage.git"
+  },
+  "keywords": [],
+  "author": "Twel Vu<twelcone@github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twelcone/twel-homepage/issues"
+  },
+  "homepage": "https://github.com/twelcone/twel-homepage#readme",
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "framer-motion": "^6.3.16",
+    "next": "^12.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-next": "^12.2.0",
+    "prettier": "^2.7.1"
+  }
+}
