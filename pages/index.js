@@ -2,9 +2,10 @@ import { Container, Box, Heading } from '@chakra-ui/react'
 
 const Page = () => {
   return (
-    <Container>    
-      <Box borderRadius="lg" bg="red" p={3} mb={6} align='center'>
-        Hello, I'm a college student at University of Information Technology - VNUHCM
+    <Container>
+      <Box borderRadius="lg" bg="red" p={3} mb={6} align="center">
+        Hello, I'm a college student at University of Information Technology -
+        VNUHCM
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -13,10 +14,10 @@ const Page = () => {
             Twel Vu
           </Heading>
           <p>Research Intern | Senior Student </p>
-	      </Box>
+        </Box>
       </Box>
     </Container>
   )
-} 
+}
 
 export default Page

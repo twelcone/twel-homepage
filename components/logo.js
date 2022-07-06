@@ -24,7 +24,7 @@ const Logo = () => {
       <a>
         <LogoBox>
           <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text 
+          <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily="M PLUS Rounded 1c"
             fontWeight="bold"
@@ -39,4 +39,3 @@ const Logo = () => {
 }
 
 export default Logo
-       

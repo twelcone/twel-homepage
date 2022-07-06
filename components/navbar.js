@@ -15,7 +15,8 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 
-import { HamburgerIcon, HumbergerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggleButtom from './theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -27,7 +28,7 @@ const LinkItem = ({ href, path, children }) => {
         bg={active ? 'glassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
       >
-	      {children}
+        {children}
       </Link>
     </NextLink>
   )
@@ -41,16 +42,16 @@ const Navbar = props => {
       as="nav"
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{backdropFilter:'blur(10px'}}
+      style={{ backdropFilter: 'blur(10px' }}
       zIndex={1}
       {...props}
     >
-      <Container 
-        display="flex" 
-        p={2} 
-        maxW="container.md" 
-        wrap="wrap" 
-        align="center" 
+      <Container
+        display="flex"
+        p={2}
+        maxW="container.md"
+        wrap="wrap"
+        align="center"
         justify="space-between"
       >
         <Flex align="center" mr={5}>
@@ -59,22 +60,34 @@ const Navbar = props => {
           </Heading>
         </Flex>
 
-        <Stack 
-          direction={{base: 'column', md: 'row'}}
-          display={{base: 'none', md: 'flex'}}
-          width={{base: 'full', md: 'auto'}}
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
-          mt={{base: 4, nmd: 0}}
+          mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href="/works" path={path}> Works</LinkItem>
-          <LinkItem href="/abc" path={path}> ABC</LinkItem>
+          <LinkItem href="/works" path={path}>
+            {' '}
+            Works
+          </LinkItem>
+          <LinkItem href="/abc" path={path}>
+            {' '}
+            ABC
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
-          <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
+          <ThemeToggleButtom />
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
-              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>About Me</MenuItem>
@@ -85,12 +98,16 @@ const Navbar = props => {
                 <NextLink href="/abc" passHref>
                   <MenuItem as={Link}>ABC</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="https://github.com/twelcone/twel-homepage">View Source</MenuItem>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/twelcone/twel-homepage"
+                >
+                  View Source
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
         </Box>
-
       </Container>
     </Box>
   )
