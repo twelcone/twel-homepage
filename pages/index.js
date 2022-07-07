@@ -1,5 +1,8 @@
-import { Container, Box, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import { Container, Button, Box, Link, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Page = () => {
   return (
@@ -11,8 +14,7 @@ const Page = () => {
         mb={6} 
         align="center"
       >
-        Hello, I'm a college student at University of Information Technology -
-        VNUHCM
+        Hello, I'm a developer lived in Vietnam
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -20,7 +22,7 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Twel Vu
           </Heading>
-          <p>Research Intern | Senior Student </p>
+          <p>Developer | Research Intern | Senior Student </p>
         </Box>
 
         <Box 
@@ -45,7 +47,25 @@ const Page = () => {
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <p>Paragraph</p>
+        <Paragraph>
+          My passion as a developer comes from a life-long obsession with computer. 
+          I'm lucky because of having the first laptop at the age of twelve. 
+          After a long time in contact with the computer, I find myself love coding at the bottom of my heart.
+          Now I'm a Junior Computer Science student at {' '}
+          <NextLink href="https://en.uit.edu.vn/overview-vnuhcm-university-information-technology">
+            <Link>University of Information Technology - VNUHCM</Link>
+          </NextLink>
+          . I chose Computer Vision (CV) and Deep Learning (DL) as my specialized because I found that 
+          DL and CV will greatly help people's lives in the "Digital Age - 4IR".
+        </Paragraph>
+        
+        <Box align="center" my={4}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My Portfolio
+            </Button>
+          </NextLink>
+        </Box>
       </Section>
     </Container>
   )
