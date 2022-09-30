@@ -1,10 +1,12 @@
-import { Container, Button, Box, Link, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import { Container, Button, Box, Link, SimpleGrid, Heading, Image, Icon, useColorModeValue, List, ListItem } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
+import { GridItem } from '../components/grid-item'
+import { IoLogoGithub, IoLogoFacebook } from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -25,7 +27,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title">
               Twel Vu
             </Heading>
-            <p>Developer | Research Intern | Senior Student </p>
+            <p>Machine Learning | Computer Vision | AI Engineer</p>
           </Box>
 
           <Box 
@@ -79,6 +81,28 @@ const Page = () => {
             <BioYear>2001</BioYear>
             Born in Ho Chi Minh City, Vietnam.
           </BioSection>
+        </Section>
+        
+        <Section delay={0.3}>
+          <Heading as="h3" variant={"selection-title"}>
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/twelcone" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub} />}>
+                  @twelcone
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://facebook.com/dangvu2k1" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoFacebook} />}>
+                  Đăng Vũ
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
